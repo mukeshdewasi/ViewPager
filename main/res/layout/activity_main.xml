@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            android:text="Skip"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            style="@style/ThemeOverlay.Material3.Button.TonalButton"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_above="@+id/indicator">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/layout2"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            style="@style/ThemeOverlay.Material3.Button.ElevatedButton"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
